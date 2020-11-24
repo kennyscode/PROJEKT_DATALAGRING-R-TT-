@@ -32,7 +32,7 @@ namespace DatabaseConnection
 
                     var url = cells[5].Trim('"');
 
-                    // Hoppa över alla icke-fungerande url:er
+                    // Hoppa över alla icke-fungerande url:erer
                     try{ var test = new Uri(url); }
                     catch (Exception) { continue; }
 
