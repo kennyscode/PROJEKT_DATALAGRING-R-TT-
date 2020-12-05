@@ -16,5 +16,5 @@ namespace Store
         public static Movie Pick { get; set; } // Film som användaren valt att hyra hej 
     }
 
-    // tjo bram
+    // tjo bram asdasdasd
 }
