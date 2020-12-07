@@ -91,7 +91,7 @@ namespace DatabaseConnection
                 {
 
                     new Movie { Filmtitel = "The Dark Knight", LeadingActors = new List<LeadingActor> { LeadingActors[0], LeadingActors[1] }, Genres = new List<Genre> { Genres[0], Genres[1], Genres[3], Genres[11] }, Bild = "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_UX182_CR0,0,182,268_AL_.jpg" },
-                    new Movie { Filmtitel = "The Dark Knight", LeadingActors = new List<LeadingActor> { LeadingActors[0], LeadingActors[1] }, Genres = new List<Genre> { Genres[0], Genres[1], Genres[3], Genres[11] }, Bild = "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_UX182_CR0,0,182,268_AL_.jpg" }
+                    new Movie { Filmtitel = "The Equalizer", LeadingActors = new List<LeadingActor> { LeadingActors[2] }, Genres = new List<Genre> { Genres[1], Genres[11] }, Bild = "https://images-na.ssl-images-amazon.com/images/I/51GmLzvLbCL._AC_.jpg" }
 
                 };
                 ctx.AddRange(movies);
