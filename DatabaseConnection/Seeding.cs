@@ -17,9 +17,9 @@ namespace DatabaseConnection
                 ctx.RemoveRange(ctx.Customers);
 
                 ctx.AddRange(new List<Customer> {
-                    new Customer { Användarnamn = "Björn" },
-                    new Customer { Användarnamn = "Robin" },
-                    new Customer { Användarnamn = "Kalle" },
+                    new Customer { Name = "Björn" },
+                    new Customer { Name = "Robin" },
+                    new Customer { Name = "Kalle" },
                 });
 
                 // Här laddas data in från SeedData foldern för att fylla ut Movies tabellen
@@ -36,7 +36,7 @@ namespace DatabaseConnection
                     try{ var test = new Uri(url); }
                     catch (Exception) { continue; }
 
-                    movies.Add(new Movie { Filmtitel = cells[2], Bild = url });
+                    movies.Add(new Movie { Title = cells[2], ImageURL = url });
                 }
                 ctx.AddRange(movies);
 
