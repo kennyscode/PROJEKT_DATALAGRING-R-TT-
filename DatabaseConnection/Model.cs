@@ -29,5 +29,18 @@ namespace DatabaseConnection
         public DateTime Date { get; set; }
         public virtual Customer Customer { get; set; }
         public virtual Movie Movie { get; set; }
+
+
     }
+     
+    public class Genre
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public virtual List<Movie> Movies { get; set; }
+
+        
+    }
+
+
 }
