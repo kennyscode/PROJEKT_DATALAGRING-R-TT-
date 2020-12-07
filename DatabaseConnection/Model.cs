@@ -31,4 +31,6 @@ namespace DatabaseConnection
         public virtual Customer Customer { get; set; }
         public virtual Movie Movie { get; set; }
     }
+
+    
 }
