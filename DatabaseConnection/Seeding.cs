@@ -98,7 +98,9 @@ namespace DatabaseConnection
                     new Movie { Filmtitel = "Scarface", LeadingActors = new List<LeadingActor> { LeadingActors[3] }, Genres = new List<Genre> { Genres[4], Genres[4] }, Bild = "https://images-na.ssl-images-amazon.com/images/I/61luAu5kqTL._AC_SL1024_.jpg" },
                     new Movie { Filmtitel = "The Shining", LeadingActors = new List<LeadingActor> { LeadingActors[12] }, Genres = new List<Genre> { Genres[15], Genres[9] }, Bild = "https://images-na.ssl-images-amazon.com/images/I/41AjA9SkVQL._AC_.jpg" },
                     new Movie { Filmtitel = "Joker", LeadingActors = new List<LeadingActor> { LeadingActors[10] }, Genres = new List<Genre> { Genres[4], Genres[6] }, Bild = "https://images-na.ssl-images-amazon.com/images/I/61c8%2Bf32PJL._AC_SL1008_.jpg" },
-
+                    new Movie { Filmtitel = "Darkest Hour", LeadingActors = new List<LeadingActor> { LeadingActors[9] }, Genres = new List<Genre> { Genres[14], Genres[6] }, Bild = "https://images-na.ssl-images-amazon.com/images/I/91-O2R8PcDL._AC_SL1500_.jpg" },
+                    new Movie { Filmtitel = "Forrest Gump", LeadingActors = new List<LeadingActor> { LeadingActors[1] }, Genres = new List<Genre> { Genres[6], Genres[12] }, Bild = "https://images-na.ssl-images-amazon.com/images/I/41dkwOlFjYL._AC_.jpg" },
+                    new Movie { Filmtitel = "Rain Man", LeadingActors = new List<LeadingActor> { LeadingActors[8] }, Genres = new List<Genre> { Genres[6], Genres[5] }, Bild = "https://images-na.ssl-images-amazon.com/images/I/51gki0QUmuL._AC_.jpg" }
                 };
                 ctx.AddRange(movies);
 
