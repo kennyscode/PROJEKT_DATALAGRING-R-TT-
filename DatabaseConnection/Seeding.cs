@@ -83,7 +83,20 @@ namespace DatabaseConnection
 
                 List<LeadingActor> LeadingActors = new List<LeadingActor>
                 {
-                    new LeadingActor {First_name ="Leonardo ",      Surname ="DiCaprio"}
+                    new LeadingActor {First_name ="Leonardo",    Surname ="DiCaprio"}
+                    new LeadingActor {First_name ="Tom",         Surname ="Hanks"}
+                    new LeadingActor {First_name ="Denzel",      Surname ="Washington"}
+                    new LeadingActor {First_name ="Al",          Surname ="Pacino"}
+                    new LeadingActor {First_name ="Anthony",     Surname ="Hopkins"}
+                    new LeadingActor {First_name ="Leonardo",    Surname ="DiCaprio"}
+                    new LeadingActor {First_name ="Marlon",      Surname ="Brando"}
+                    new LeadingActor {First_name ="Morgan ",     Surname ="Freeman"}
+                    new LeadingActor {First_name ="Dustin ",     Surname ="Hoffman"}
+                    new LeadingActor {First_name ="Gary ",       Surname ="Oldman"}
+                    new LeadingActor {First_name ="Joaquin ",    Surname ="Pheonix"}
+                    new LeadingActor {First_name ="Christian ",  Surname ="Bale"}
+                    new LeadingActor {First_name ="Jack ",       Surname ="Nicholson"}
+
 
 
 
