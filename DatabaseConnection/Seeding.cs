@@ -104,6 +104,18 @@ namespace DatabaseConnection
 
                 List<Rental> Rentals = new List<Rental>
                 {
+                    new Rental {Date = DateTime.Parse("2020-12-07 00:00:00"), Customer = Customers[0], Movie = movies[2]},
+                    new Rental {Date = DateTime.Parse("2020-12-02 00:01:21"), Customer = Customers[1], Movie = movies[8]},
+                    new Rental {Date = DateTime.Parse("2020-12-04 00:22:22"), Customer = Customers[2], Movie = movies[4]},
+                    new Rental {Date = DateTime.Parse("2020-12-01 00:28:42"), Customer = Customers[3], Movie = movies[1]},
+                    new Rental {Date = DateTime.Parse("2020-12-05 01:02:12"), Customer = Customers[4], Movie = movies[5]},
+                    new Rental {Date = DateTime.Parse("2020-12-02 02:07:22"), Customer = Customers[5], Movie = movies[6]},
+                    new Rental {Date = DateTime.Parse("2020-12-05 06:08:22"), Customer = Customers[6], Movie = movies[7]},
+                    new Rental {Date = DateTime.Parse("2020-12-06 07:08:02"), Customer = Customers[7], Movie = movies[10]},
+                    new Rental {Date = DateTime.Parse("2020-12-06 07:07:07"), Customer = Customers[8], Movie = movies[8]}
+
+
+
 
                 };
                 ctx.AddRange(Rentals);
