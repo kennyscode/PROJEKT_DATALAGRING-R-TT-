@@ -13,8 +13,9 @@ namespace Store
     {
         public static Customer User { get; set; } // Användaren som loggat in
         public static List<Movie> Movies { get; set; } // Filmer jag hämtat från databasen
-        public static Movie Pick { get; set; } // Film som användaren valt att hyra hej 
+        public static Movie Pick { get; set; } // Film som användaren valt att hyra
+        public static Rental Rentals { get; set; }
+
     }
 
-    // tjo bram asdasdasd
 }
