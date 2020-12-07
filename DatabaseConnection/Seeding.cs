@@ -20,10 +20,10 @@ namespace DatabaseConnection
 
 
                 ctx.AddRange(new List<Customer> {
-                    new Customer { Användarnamn = "Masterape32", Mailaddress = "hehhek@hotmail.com", Telefonnummer = "0739615518", Postaddress = "30257", Lösenord = "rZ5JCRrZ96yTaEau"  },
-                    new Customer { Användarnamn = "Kingen321", Mailaddress = "xopemi1429@menece.com", Telefonnummer = "073152282", Postaddress = "30297", Lösenord = "hYMfxdVLJJ64Hv2C"  },
-                    new Customer { Användarnamn = "Våldmottjänsteman", Mailaddress = "bymmupeto-5495@yopmail.com", Telefonnummer = "0737123710", Postaddress = "30257", Lösenord = "UNaw4zFhx4nMZq9q"  },
-                    new Customer { Användarnamn = "Starwarslover123", Mailaddress = "excellentplay44@hotmail.se", Telefonnummer = "0737885521", Postaddress = "30257", Lösenord = "PxQyxL5F8nJZAVep"  },
+                    new Customer { Användarnamn = "Masterape32", Lösenord = "rZ5JCRrZ96yTaEau", Mailaddress = "hehhek@hotmail.com", Telefonnummer = "0739615518", Postaddress = "30257" },
+                    new Customer { Användarnamn = "Kingen321", Lösenord = "hYMfxdVLJJ64Hv2C", Mailaddress = "xopemi1429@menece.com", Telefonnummer = "073152282", Postaddress = "30297" },
+                    new Customer { Användarnamn = "Våldmottjänsteman", Lösenord = "PxQyxL5F8nJZAVep", Mailaddress = "bymmupeto-5495@yopmail.com", Telefonnummer = "0737123710", Postaddress = "30257" },
+                    new Customer { Användarnamn = "Starwarslover123", Mailaddress = "excellentplay44@hotmail.se", Telefonnummer = "0737885521", Postaddress = "30257" },
                     new Customer { Användarnamn = "quencypromes", Mailaddress = "dasadsads@hotmail.com", Telefonnummer = "0736669953", Postaddress = "30296", Lösenord = "h3wZB9zYMJLscJNE"  },
                     new Customer { Användarnamn = "adamatraore", Mailaddress = "kingen123@hotmail.com", Telefonnummer = "0734412331", Postaddress = "30245", Lösenord = "a2MvHQLr7tk5PMNz"  },
                     new Customer { Användarnamn = "marioluigi", Mailaddress = "beast@hotmail.com", Telefonnummer = "0735555112", Postaddress = "30227", Lösenord = "5fAAT8gSZy6qdbMB"  },
