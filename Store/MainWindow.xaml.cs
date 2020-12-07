@@ -74,7 +74,7 @@ namespace Store
 
                         try
                         {
-                            image.Source = new BitmapImage(new Uri(movie.ImageURL)); // Hämta hem bildlänken till RAM
+                            image.Source = new BitmapImage(new Uri(movie.Bild)); // Hämta hem bildlänken till RAM
                         }
                         catch (Exception e) when
                             (e is ArgumentNullException ||

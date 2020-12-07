@@ -20,15 +20,16 @@ namespace DatabaseConnection
         public static List<Movie> GetMovieSlice(int skip_x, int take_x)
         {
             return ctx.Movies
-                .OrderBy(m => m.Title)
+                .OrderBy(m => m.Filmtitel)
                 .Skip(skip_x)
                 .Take(take_x)
                 .ToList();
         }
-        public static Customer GetCustomerByName(string name)
+        public static Customer GetCustomerByName(string Användarnamn)
         {
             return ctx.Customers
-                .FirstOrDefault(c => c.Name.ToLower() == name.ToLower());
+                .FirstOrDefault(c => c.Användarnamn.ToLower() == Användarnamn.ToLower());
+
         }
         public static bool RegisterSale(Customer customer, Movie movie)
         {
@@ -46,6 +47,23 @@ namespace DatabaseConnection
                 System.Diagnostics.Debug.WriteLine(e.InnerException.Message);
                 return false;
             }
+
         }
+
+        public static List<Movie> GetMovieByName(string Filmtitel)
+        {
+            return ctx.Movies.AsEnumerable().Where(m => m.Filmtitel.Contains(Filmtitel, StringComparison.OrdinalIgnoreCase)).ToList();
+        }
+
+
+        public static List<Movie> GetMovieByGenre(Genre genre)
+        {
+            using var ctx = new Context();
+
+            var movies = ctx.Movies.Where(m => m.Genres.Any(g => g.Name.ToLower() == genre.Name.ToLower())).ToList();
+
+            return movies;
+        }
+
     }
-}
+    }
