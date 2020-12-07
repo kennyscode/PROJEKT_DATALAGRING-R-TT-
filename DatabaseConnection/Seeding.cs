@@ -48,41 +48,41 @@ namespace DatabaseConnection
 
                 List<Genre> Genres = new List<Genre>
                 {
-                    new Genre {Name = "Action"}, //0
-                    new Genre {Name = "Adventure"}, //1
-                    new Genre {Name = "Animation"}, //2
-                    new Genre {Name = "Biography"}, //3
-                    new Genre {Name = "Crime"}, //4
-                    new Genre {Name = "Comedy"}, //5
-                    new Genre {Name = "Drama"}, //6
-                    new Genre {Name = "Family"}, //7
-                    new Genre {Name = "Fantasy"}, //8
-                    new Genre {Name = "Mystery"}, //9
-                    new Genre {Name = "Sci-Fi"}, //10
-                    new Genre {Name = "Thriller"}, //11
-                    new Genre {Name = "Romance"}, //12
-                    new Genre {Name = "Musical"}, //13
-                    new Genre {Name = "War"}, //14
-                    new Genre {Name = "Horror"} //15 test
+                    new Genre {Name = "Action"},
+                    new Genre {Name = "Adventure"}, 
+                    new Genre {Name = "Animation"}, 
+                    new Genre {Name = "Biography"}, 
+                    new Genre {Name = "Crime"},
+                    new Genre {Name = "Comedy"},
+                    new Genre {Name = "Drama"}, 
+                    new Genre {Name = "Family"},
+                    new Genre {Name = "Fantasy"},
+                    new Genre {Name = "Mystery"},
+                    new Genre {Name = "Sci-Fi"}, 
+                    new Genre {Name = "Thriller"},
+                    new Genre {Name = "Romance"},
+                    new Genre {Name = "Musical"},
+                    new Genre {Name = "War"},
+                    new Genre {Name = "Horror"} 
                     
                 };
                 ctx.AddRange(Genres);
 
                 List<LeadingActor> LeadingActors = new List<LeadingActor>
                 {
-                    new LeadingActor {First_name ="Leonardo",    Surname ="DiCaprio"}, //0
-                    new LeadingActor {First_name ="Tom",         Surname ="Hanks"}, //1
-                    new LeadingActor {First_name ="Denzel",      Surname ="Washington"}, //2
-                    new LeadingActor {First_name ="Al",          Surname ="Pacino"}, //3
-                    new LeadingActor {First_name ="Anthony",     Surname ="Hopkins"}, //4
-                    new LeadingActor {First_name ="Leonardo",    Surname ="DiCaprio"}, //5
-                    new LeadingActor {First_name ="Marlon",      Surname ="Brando"}, //6
-                    new LeadingActor {First_name ="Morgan ",     Surname ="Freeman"}, //7
-                    new LeadingActor {First_name ="Dustin ",     Surname ="Hoffman"}, //8
-                    new LeadingActor {First_name ="Gary ",       Surname ="Oldman"}, //9
-                    new LeadingActor {First_name ="Joaquin ",    Surname ="Pheonix"}, //10
-                    new LeadingActor {First_name ="Christian ",  Surname ="Bale"}, //11
-                    new LeadingActor {First_name ="Jack ",       Surname ="Nicholson"} //12
+                    new LeadingActor {First_name ="Leonardo",    Surname ="DiCaprio"},
+                    new LeadingActor {First_name ="Tom",         Surname ="Hanks"}, 
+                    new LeadingActor {First_name ="Denzel",      Surname ="Washington"}, 
+                    new LeadingActor {First_name ="Al",          Surname ="Pacino"}, 
+                    new LeadingActor {First_name ="Anthony",     Surname ="Hopkins"}, 
+                    new LeadingActor {First_name ="Leonardo",    Surname ="DiCaprio"}, 
+                    new LeadingActor {First_name ="Marlon",      Surname ="Brando"}, 
+                    new LeadingActor {First_name ="Morgan ",     Surname ="Freeman"}, 
+                    new LeadingActor {First_name ="Dustin ",     Surname ="Hoffman"}, 
+                    new LeadingActor {First_name ="Gary ",       Surname ="Oldman"}, 
+                    new LeadingActor {First_name ="Joaquin ",    Surname ="Pheonix"}, 
+                    new LeadingActor {First_name ="Christian ",  Surname ="Bale"},
+                    new LeadingActor {First_name ="Jack ",       Surname ="Nicholson"}
 
                 };
                 ctx.AddRange(LeadingActors);
@@ -113,9 +113,6 @@ namespace DatabaseConnection
                     new Rental {Date = DateTime.Parse("2020-12-05 06:08:22"), Customer = Customers[6], Movie = movies[7]},
                     new Rental {Date = DateTime.Parse("2020-12-06 07:08:02"), Customer = Customers[7], Movie = movies[10]},
                     new Rental {Date = DateTime.Parse("2020-12-06 07:07:07"), Customer = Customers[8], Movie = movies[8]}
-
-
-
 
                 };
                 ctx.AddRange(Rentals);
