@@ -21,6 +21,7 @@ namespace DatabaseConnection
         public string Filmtitel { get; set; }
         public string Bild { get; set; }
         public virtual List<LeadingActor> LeadingActors { get; set; }
+        public virtual List<Genre> Genres { get; set; }
         public virtual List<Rental> Rentals { get; set; }
     }
     

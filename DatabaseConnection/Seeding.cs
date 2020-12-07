@@ -12,14 +12,15 @@ namespace DatabaseConnection
         {
             using (var ctx = new Context())
             {
-                ctx.RemoveRange(ctx.Rentals);
-                ctx.RemoveRange(ctx.Genres);
-                ctx.RemoveRange(ctx.Movies);
                 ctx.RemoveRange(ctx.Customers);
+                ctx.RemoveRange(ctx.Movies);
+                ctx.RemoveRange(ctx.Genres);
                 ctx.RemoveRange(ctx.LeadingActors);
+                ctx.RemoveRange(ctx.Rentals);
 
 
-                ctx.AddRange(new List<Customer> {
+                List<Customer> Customers = new List<Customer>
+                {
                     new Customer { Användarnamn = "Masterape32", Lösenord = "rZ5JCRrZ96yTaEau", Mailaddress = "hehhek@hotmail.com", Telefonnummer = "0739615518", Postaddress = "30257" },
                     new Customer { Användarnamn = "Kingen321", Lösenord = "hYMfxdVLJJ64Hv2C", Mailaddress = "xopemi1429@menece.com", Telefonnummer = "073152282", Postaddress = "30297" },
                     new Customer { Användarnamn = "Våldmottjänsteman", Lösenord = "PxQyxL5F8nJZAVep", Mailaddress = "bymmupeto-5495@yopmail.com", Telefonnummer = "0737123710", Postaddress = "30257" },
@@ -41,7 +42,9 @@ namespace DatabaseConnection
                     new Customer { Användarnamn = "ebfranvallas", Mailaddress = "bayye@hotmail.com", Telefonnummer = "0737993450", Postaddress = "30227", Lösenord = "pqEhr4xeASD3B6ga"  },
                     new Customer { Användarnamn = "sheeesh", Mailaddress = "magnus.uggla@hotmail.com", Telefonnummer = "0731133561", Postaddress = "30247", Lösenord = "4Jgf5a6qmzNqwEFH"  }
 
-                });
+                };
+                ctx.AddRange(Customers);
+
 
                 List<Genre> Genres = new List<Genre>
                 {
@@ -63,50 +66,60 @@ namespace DatabaseConnection
                 };
                 ctx.AddRange(Genres);
 
-                // Här laddas data in från SeedData foldern för att fylla ut Movies tabellen
-                var movies = new List<Movie>();
-                var lines = File.ReadAllLines(@"..\..\..\SeedData\MovieGenre.csv");
-                for (int i = 1; i < 200; i++)
-                {
-                    // imdbId,Imdb Link,Title,IMDB Score,Genre,Poster
-                    var cells = lines[i].Split(',');
-
-                    var url = cells[5].Trim('"');
-
-                    // Hoppa över alla icke-fungerande url:erer
-                    try{ var test = new Uri(url); }
-                    catch (Exception) { continue; }
-
-                    movies.Add(new Movie { Filmtitel = cells[2], Bild = url });
-                }
-                ctx.AddRange(movies);
-
                 List<LeadingActor> LeadingActors = new List<LeadingActor>
                 {
-                    new LeadingActor {First_name ="Leonardo",    Surname ="DiCaprio"}
-                    new LeadingActor {First_name ="Tom",         Surname ="Hanks"}
-                    new LeadingActor {First_name ="Denzel",      Surname ="Washington"}
-                    new LeadingActor {First_name ="Al",          Surname ="Pacino"}
-                    new LeadingActor {First_name ="Anthony",     Surname ="Hopkins"}
-                    new LeadingActor {First_name ="Leonardo",    Surname ="DiCaprio"}
-                    new LeadingActor {First_name ="Marlon",      Surname ="Brando"}
-                    new LeadingActor {First_name ="Morgan ",     Surname ="Freeman"}
-                    new LeadingActor {First_name ="Dustin ",     Surname ="Hoffman"}
-                    new LeadingActor {First_name ="Gary ",       Surname ="Oldman"}
-                    new LeadingActor {First_name ="Joaquin ",    Surname ="Pheonix"}
-                    new LeadingActor {First_name ="Christian ",  Surname ="Bale"}
+                    new LeadingActor {First_name ="Leonardo",    Surname ="DiCaprio"},
+                    new LeadingActor {First_name ="Tom",         Surname ="Hanks"},
+                    new LeadingActor {First_name ="Denzel",      Surname ="Washington"},
+                    new LeadingActor {First_name ="Al",          Surname ="Pacino"},
+                    new LeadingActor {First_name ="Anthony",     Surname ="Hopkins"},
+                    new LeadingActor {First_name ="Leonardo",    Surname ="DiCaprio"},
+                    new LeadingActor {First_name ="Marlon",      Surname ="Brando"},
+                    new LeadingActor {First_name ="Morgan ",     Surname ="Freeman"},
+                    new LeadingActor {First_name ="Dustin ",     Surname ="Hoffman"},
+                    new LeadingActor {First_name ="Gary ",       Surname ="Oldman"},
+                    new LeadingActor {First_name ="Joaquin ",    Surname ="Pheonix"},
+                    new LeadingActor {First_name ="Christian ",  Surname ="Bale"},
                     new LeadingActor {First_name ="Jack ",       Surname ="Nicholson"}
-
-
-
-
 
                 };
                 ctx.AddRange(LeadingActors);
 
+
+
+                List<Movie> movies = new List<Movie>
+                {
+
+                    new Movie { Filmtitel = "The Dark Knight", LeadingActors = new List<LeadingActor> { LeadingActors[0], LeadingActors[1] }, Genres = new List<Genre> { Genres[0], Genres[1], Genres[3], Genres[11] }, Bild = "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_UX182_CR0,0,182,268_AL_.jpg" },
+                    new Movie { Filmtitel = "The Dark Knight", LeadingActors = new List<LeadingActor> { LeadingActors[0], LeadingActors[1] }, Genres = new List<Genre> { Genres[0], Genres[1], Genres[3], Genres[11] }, Bild = "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_UX182_CR0,0,182,268_AL_.jpg" }
+
+                };
+                ctx.AddRange(movies);
+
+                List<Rental> Rentals = new List<Rental>
+                {
+
+                };
+                ctx.AddRange(Rentals);
 
                 ctx.SaveChanges();
             }
         }
     }
 }
+
+
+/*
+ * var lines = File.ReadAllLines(@"..\..\..\SeedData\MovieGenre.csv");
+   for (int i = 1; i < 200; i++)
+ imdbId,Imdb Link,Title,IMDB Score,Genre,Poster
+var cells = lines[i].Split(',');
+
+var url = cells[5].Trim('"');
+
+// Hoppa över alla icke-fungerande url:erer
+try { var test = new Uri(url); }
+catch (Exception) { continue; }
+
+movies.Add(new Movie { Filmtitel = cells[2], Bild = url });
+*/
