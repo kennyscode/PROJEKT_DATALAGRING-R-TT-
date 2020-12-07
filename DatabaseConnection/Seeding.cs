@@ -62,7 +62,7 @@ namespace DatabaseConnection
                     new Genre {Name = "Thriller"}, //11
                     new Genre {Name = "Romance"}, //12
                     new Genre {Name = "Musical"}, //13
-                    new Genre {Name = "War"} //14
+                    new Genre {Name = "War"}, //14
                     new Genre {Name = "Horror"} //15 test
                     
                 };
