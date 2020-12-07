@@ -27,21 +27,21 @@ namespace DatabaseConnection
 
                 List<Genre> Genres = new List<Genre>
                 {
-                    new Genre { Name = "Action" },
-                    new Genre { Name = "Adventure" },
-                    new Genre { Name = "Animation" },
-                    new Genre { Name = "Biography" },
-                    new Genre { Name = "Crime" },
-                    new Genre { Name = "Comedy" },
-                    new Genre { Name = "Drama" },
-                    new Genre { Name = "Family" },
-                    new Genre { Name = "Fantasy" },
-                    new Genre { Name = "Mystery" },
-                    new Genre { Name = "Sci-Fi" },
-                    new Genre { Name = "Thriller" },
-                    new Genre { Name = "Romance" },
-                    new Genre { Name = "Musical" },
-                    new Genre { Name = "War" }
+                    new Genre {Name = "Action"},
+                    new Genre {Name = "Adventure"},
+                    new Genre {Name = "Animation"},
+                    new Genre {Name = "Biography"},
+                    new Genre {Name = "Crime"},
+                    new Genre {Name = "Comedy"},
+                    new Genre {Name = "Drama"},
+                    new Genre {Name = "Family"},
+                    new Genre {Name = "Fantasy"},
+                    new Genre {Name = "Mystery"},
+                    new Genre {Name = "Sci-Fi"},
+                    new Genre {Name = "Thriller"},
+                    new Genre {Name = "Romance"},
+                    new Genre {Name = "Musical"},
+                    new Genre {Name = "War"}
                 };
                 ctx.AddRange(Genres);
 
@@ -62,6 +62,17 @@ namespace DatabaseConnection
                     movies.Add(new Movie { Filmtitel = cells[2], Bild = url });
                 }
                 ctx.AddRange(movies);
+
+                List<LeadingActor> LeadingActors = new List<LeadingActor>
+                {
+                    new LeadingActor {First_name ="Leonardo ",      Surname ="DiCaprio"}
+
+
+
+
+                };
+                ctx.AddRange(LeadingActors);
+
 
                 ctx.SaveChanges();
             }
