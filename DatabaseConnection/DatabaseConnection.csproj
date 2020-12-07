@@ -6,6 +6,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="pictures\41dkwOlFjYL._AC_.jpg" />
+    <None Remove="pictures\510L5ypQBdL._AC_SL1024_.jpg" />
+    <None Remove="pictures\51gki0QUmuL._AC_.jpg" />
+    <None Remove="pictures\51GmLzvLbCL._AC_.jpg" />
+    <None Remove="pictures\61c8+f32PJL._AC_SL1008_.jpg" />
+    <None Remove="pictures\61luAu5kqTL._AC_SL1024_.jpg" />
+    <None Remove="pictures\91-O2R8PcDL._AC_SL1500_.jpg" />
+    <None Remove="pictures\MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw%40%40._V1_UX182_CR0,0,182,268_AL_.jpg" />
+    <None Remove="pictures\MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM%40._V1_UX182_CR0,0,182,268_AL_.jpg" />
+    <None Remove="pictures\TheShining.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -20,6 +33,19 @@
 
   <ItemGroup>
     <Folder Include="SeedData\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="pictures\41dkwOlFjYL._AC_.jpg" />
+    <Resource Include="pictures\510L5ypQBdL._AC_SL1024_.jpg" />
+    <Resource Include="pictures\51gki0QUmuL._AC_.jpg" />
+    <Resource Include="pictures\51GmLzvLbCL._AC_.jpg" />
+    <Resource Include="pictures\61c8+f32PJL._AC_SL1008_.jpg" />
+    <Resource Include="pictures\61luAu5kqTL._AC_SL1024_.jpg" />
+    <Resource Include="pictures\91-O2R8PcDL._AC_SL1500_.jpg" />
+    <Resource Include="pictures\MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_UX182_CR0,0,182,268_AL_.jpg" />
+    <Resource Include="pictures\MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg" />
+    <Resource Include="pictures\TheShining.jpg" />
   </ItemGroup>
 
 </Project>
