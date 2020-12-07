@@ -10,8 +10,8 @@ namespace DatabaseConnection
         public string Användarnamn { get; set; }
         public string Lösenord { get; set; }
         public string Telefonnummer { get; set; }
-        public string mailaddress { get; set; }
-        public string postaddress { get; set; }
+        public string Mailaddress { get; set; }
+        public string Postaddress { get; set; }
         public virtual List<Rental> Rentals { get; set; }
     }
     
@@ -23,7 +23,6 @@ namespace DatabaseConnection
         public virtual List<LeadingActor> LeadingActors { get; set; }
         public virtual List<Rental> Rentals { get; set; }
     }
-    
     
     public class Rental
     {
