@@ -90,8 +90,8 @@ namespace DatabaseConnection
                 List<Movie> movies = new List<Movie>
                 {
 
-                    new Movie { Filmtitel = "The Dark Knight", LeadingActors = new List<LeadingActor> { LeadingActors[0], LeadingActors[1] }, Genres = new List<Genre> { Genres[0], Genres[1], Genres[3], Genres[11] }, Bild = "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_UX182_CR0,0,182,268_AL_.jpg" },
-                    new Movie { Filmtitel = "The Dark Knight", LeadingActors = new List<LeadingActor> { LeadingActors[0], LeadingActors[1] }, Genres = new List<Genre> { Genres[0], Genres[1], Genres[3], Genres[11] }, Bild = "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_UX182_CR0,0,182,268_AL_.jpg" }
+                    new Movie { Filmtitel = "The Dark Knight", LeadingActors = new List<LeadingActor> { LeadingActors[11] }, Genres = new List<Genre> { Genres[4], Genres[0], Genres[6] }, Bild = "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_UX182_CR0,0,182,268_AL_.jpg" },
+                    new Movie { Filmtitel = "Inception", LeadingActors = new List<LeadingActor> { LeadingActors[5]}, Genres = new List<Genre> { Genres[0], Genres[4], Genres[10] }, Bild = "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg" }
 
                 };
                 ctx.AddRange(movies);
