@@ -17,4 +17,6 @@ namespace Store
         public static Rental Rentals { get; set; }
 
     }
+
+    // tjo bram asdasdasd
 }
