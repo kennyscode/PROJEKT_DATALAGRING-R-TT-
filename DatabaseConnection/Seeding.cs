@@ -16,6 +16,8 @@ namespace DatabaseConnection
                 ctx.RemoveRange(ctx.Genres);
                 ctx.RemoveRange(ctx.Movies);
                 ctx.RemoveRange(ctx.Customers);
+                ctx.RemoveRange(ctx.LeadingActors);
+
 
                 ctx.AddRange(new List<Customer> {
                     new Customer { Användarnamn = "Masterape32", Mailaddress = "hehhek@hotmail.com", Telefonnummer = "0739615518", Postaddress = "30257", Lösenord = "rZ5JCRrZ96yTaEau"  },
@@ -40,6 +42,26 @@ namespace DatabaseConnection
                     new Customer { Användarnamn = "sheeesh", Mailaddress = "magnus.uggla@hotmail.com", Telefonnummer = "0731133561", Postaddress = "30247", Lösenord = "4Jgf5a6qmzNqwEFH"  }
 
                 });
+
+                List<Genre> Genres = new List<Genre>
+                {
+                    new Genre { Name = "Action" },
+                    new Genre { Name = "Adventure" },
+                    new Genre { Name = "Animation" },
+                    new Genre { Name = "Biography" },
+                    new Genre { Name = "Crime" },
+                    new Genre { Name = "Comedy" },
+                    new Genre { Name = "Drama" },
+                    new Genre { Name = "Family" },
+                    new Genre { Name = "Fantasy" },
+                    new Genre { Name = "Mystery" },
+                    new Genre { Name = "Sci-Fi" },
+                    new Genre { Name = "Thriller" },
+                    new Genre { Name = "Romance" },
+                    new Genre { Name = "Musical" },
+                    new Genre { Name = "War" }
+                };
+                ctx.AddRange(Genres);
 
                 // Här laddas data in från SeedData foldern för att fylla ut Movies tabellen
                 var movies = new List<Movie>();
