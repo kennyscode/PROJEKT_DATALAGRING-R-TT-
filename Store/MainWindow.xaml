@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Store"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-        <Image Width="300" Source="pictures\41dkwOlFjYL._AC_.jpg" Name="BildAttSpara"></Image>
+        Title="MainWindow" Height="450" Width="1000">
+       <!-- <Image Width="100" Source="pictures\41dkwOlFjYL._AC_.jpg" Name="BildAttSpara"></Image> -->
         <!-- En ScrollViewer för att kunna scrolla igenom alla filmer -->
         <ScrollViewer>
             <!-- 
             Grid är användbart när man vill få lite struktur i sin UI.
             Alla celler måste inte vara lika stora dock som i detta exemplet
         -->
-            <Grid Name="MovieGrid" Background="LightSteelBlue" ShowGridLines="True" Width="790">
+            <Grid Name="MovieGrid" Background="LightSteelBlue" ShowGridLines="True" Width="1000">
                 <!-- Här har jag manuellt bestämt antalet kolumner jag vill ha -->
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
@@ -27,7 +27,7 @@
                 </Grid.RowDefinitions>
             </Grid>
         </ScrollViewer>
-        </Image>
+      <!--  </Image> -->
 </Window>
 
 
