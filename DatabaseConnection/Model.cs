@@ -18,7 +18,7 @@ namespace DatabaseConnection
     public class Movie
     {
         public int Id { get; set; }
-        public string Filmtitel { get; set; }
+        public string Title { get; set; }
         public string Bild { get; set; }
         public virtual List<LeadingActor> LeadingActors { get; set; }
         public virtual List<Genre> Genres { get; set; }
