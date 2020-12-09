@@ -36,10 +36,19 @@ namespace Store
             int movie_take_count = 30;
             State.Movies = API.GetMovieSlice(movie_skip_count, movie_take_count);
 
+
+
             int column_count = MovieGrid.ColumnDefinitions.Count;
 
-            
-            
+            /*
+             * cols = 3, movs = 10
+             * 
+             * rows = movs/cols = 3.333
+             * 
+             * vi behöver alltså 4 rader. Vi kan inte bara göra en vanlig heltalsdivision.
+             * 
+             * rows = ceiling(movs/cols) = 4
+             */
             int row_count = (int)Math.Ceiling((double)State.Movies.Count / (double)column_count);
 
             for (int y = 0; y < row_count; y++)
@@ -94,6 +103,26 @@ namespace Store
                     }
                 }
             }
+        }
+
+        // Vad som händer när man klickar på en filmikon i appen.
+        private void Image_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            // Ta reda på vilken koordinat den klickade bilden har.
+            var x = Grid.GetColumn(sender as UIElement);
+            var y = Grid.GetRow(sender as UIElement);
+            
+            // Används koordinaten för att ta reda på vilken motsvarande record det rörde sig om.
+            int i = y * MovieGrid.ColumnDefinitions.Count + x;
+            // Lägg valet på minne.
+            State.Pick = State.Movies[i];
+
+            // Försök att registrera en uthyrning.
+            if (API.RegisterSale(State.User, State.Pick))
+                // MessageBox är små pop-up fönster som är behändiga för att varna användaren om fel etc.
+                MessageBox.Show("All is well and you can download your movie now.", "Sale Succeeded!", MessageBoxButton.OK, MessageBoxImage.Information);
+            else
+                MessageBox.Show("An error happened while buying the movie, please try again at a later time.", "Sale Failed!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
