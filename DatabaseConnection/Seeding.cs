@@ -91,16 +91,16 @@ namespace DatabaseConnection
 
                 List<Movie> movies = new List<Movie>
                 {
-                    new Movie { Filmtitel = "Inception", LeadingActors = new List<LeadingActor> { LeadingActors[5]}, Genres = new List<Genre> { Genres[0], Genres[4], Genres[10] }, Bild = "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg" },
-                    new Movie { Filmtitel = "The Dark Knight", LeadingActors = new List<LeadingActor> { LeadingActors[0], LeadingActors[1] }, Genres = new List<Genre> { Genres[0], Genres[1], Genres[3], Genres[11] }, Bild = "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_UX182_CR0,0,182,268_AL_.jpg" },
-                    new Movie { Filmtitel = "The Equalizer", LeadingActors = new List<LeadingActor> { LeadingActors[2] }, Genres = new List<Genre> { Genres[1], Genres[11] }, Bild = "https://images-na.ssl-images-amazon.com/images/I/51GmLzvLbCL._AC_.jpg" },
-                    new Movie { Filmtitel = "The Godfather", LeadingActors = new List<LeadingActor> { LeadingActors[3], LeadingActors[6] }, Genres = new List<Genre> { Genres[4], Genres[4] }, Bild = "https://images-na.ssl-images-amazon.com/images/I/510L5ypQBdL._AC_SL1024_.jpg" },
-                    new Movie { Filmtitel = "Scarface", LeadingActors = new List<LeadingActor> { LeadingActors[3] }, Genres = new List<Genre> { Genres[4], Genres[4] }, Bild = "https://images-na.ssl-images-amazon.com/images/I/61luAu5kqTL._AC_SL1024_.jpg" },
-                    new Movie { Filmtitel = "The Shining", LeadingActors = new List<LeadingActor> { LeadingActors[12] }, Genres = new List<Genre> { Genres[15], Genres[9] }, Bild = "https://images-na.ssl-images-amazon.com/images/I/41AjA9SkVQL._AC_.jpg" },
-                    new Movie { Filmtitel = "Joker", LeadingActors = new List<LeadingActor> { LeadingActors[10] }, Genres = new List<Genre> { Genres[4], Genres[6] }, Bild = "https://images-na.ssl-images-amazon.com/images/I/61c8%2Bf32PJL._AC_SL1008_.jpg" },
-                    new Movie { Filmtitel = "Darkest Hour", LeadingActors = new List<LeadingActor> { LeadingActors[9] }, Genres = new List<Genre> { Genres[14], Genres[6] }, Bild = "https://images-na.ssl-images-amazon.com/images/I/91-O2R8PcDL._AC_SL1500_.jpg" },
-                    new Movie { Filmtitel = "Forrest Gump", LeadingActors = new List<LeadingActor> { LeadingActors[1] }, Genres = new List<Genre> { Genres[6], Genres[12] }, Bild = "https://images-na.ssl-images-amazon.com/images/I/41dkwOlFjYL._AC_.jpg" },
-                    new Movie { Filmtitel = "Rain Man", LeadingActors = new List<LeadingActor> { LeadingActors[8] }, Genres = new List<Genre> { Genres[6], Genres[5] }, Bild = "https://images-na.ssl-images-amazon.com/images/I/51gki0QUmuL._AC_.jpg" }
+                    new Movie { Title = "Inception", LeadingActors = new List<LeadingActor> { LeadingActors[5]}, Genres = new List<Genre> { Genres[0], Genres[4], Genres[10] }, Bild = "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg" },
+                    new Movie { Title = "The Dark Knight", LeadingActors = new List<LeadingActor> { LeadingActors[0], LeadingActors[1] }, Genres = new List<Genre> { Genres[0], Genres[1], Genres[3], Genres[11] }, Bild = "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_UX182_CR0,0,182,268_AL_.jpg" },
+                    new Movie { Title = "The Equalizer", LeadingActors = new List<LeadingActor> { LeadingActors[2] }, Genres = new List<Genre> { Genres[1], Genres[11] }, Bild = "https://images-na.ssl-images-amazon.com/images/I/51GmLzvLbCL._AC_.jpg" },
+                    new Movie { Title = "The Godfather", LeadingActors = new List<LeadingActor> { LeadingActors[3], LeadingActors[6] }, Genres = new List<Genre> { Genres[4], Genres[4] }, Bild = "https://images-na.ssl-images-amazon.com/images/I/510L5ypQBdL._AC_SL1024_.jpg" },
+                    new Movie { Title = "Scarface", LeadingActors = new List<LeadingActor> { LeadingActors[3] }, Genres = new List<Genre> { Genres[4], Genres[4] }, Bild = "https://images-na.ssl-images-amazon.com/images/I/61luAu5kqTL._AC_SL1024_.jpg" },
+                    new Movie { Title = "The Shining", LeadingActors = new List<LeadingActor> { LeadingActors[12] }, Genres = new List<Genre> { Genres[15], Genres[9] }, Bild = "https://images-na.ssl-images-amazon.com/images/I/41AjA9SkVQL._AC_.jpg" },
+                    new Movie { Title = "Joker", LeadingActors = new List<LeadingActor> { LeadingActors[10] }, Genres = new List<Genre> { Genres[4], Genres[6] }, Bild = "https://images-na.ssl-images-amazon.com/images/I/61c8%2Bf32PJL._AC_SL1008_.jpg" },
+                    new Movie { Title = "Darkest Hour", LeadingActors = new List<LeadingActor> { LeadingActors[9] }, Genres = new List<Genre> { Genres[14], Genres[6] }, Bild = "https://images-na.ssl-images-amazon.com/images/I/91-O2R8PcDL._AC_SL1500_.jpg" },
+                    new Movie { Title = "Forrest Gump", LeadingActors = new List<LeadingActor> { LeadingActors[1] }, Genres = new List<Genre> { Genres[6], Genres[12] }, Bild = "https://images-na.ssl-images-amazon.com/images/I/41dkwOlFjYL._AC_.jpg" },
+                    new Movie { Title = "Rain Man", LeadingActors = new List<LeadingActor> { LeadingActors[8] }, Genres = new List<Genre> { Genres[6], Genres[5] }, Bild = "https://images-na.ssl-images-amazon.com/images/I/51gki0QUmuL._AC_.jpg" }
                 };
                 ctx.AddRange(movies);
 
@@ -110,11 +110,7 @@ namespace DatabaseConnection
                     new Rental {Date = DateTime.Parse("2020-12-02 00:01:21"), Customer = Customers[1], Movie = movies[8]},
                     new Rental {Date = DateTime.Parse("2020-12-04 00:22:22"), Customer = Customers[2], Movie = movies[4]},
                     new Rental {Date = DateTime.Parse("2020-12-01 00:28:42"), Customer = Customers[3], Movie = movies[1]},
-                    new Rental {Date = DateTime.Parse("2020-12-05 01:02:12"), Customer = Customers[4], Movie = movies[5]},
-                    new Rental {Date = DateTime.Parse("2020-12-02 02:07:22"), Customer = Customers[5], Movie = movies[6]},
-                    new Rental {Date = DateTime.Parse("2020-12-05 06:08:22"), Customer = Customers[6], Movie = movies[7]},
-                    new Rental {Date = DateTime.Parse("2020-12-06 07:08:02"), Customer = Customers[7], Movie = movies[10]},
-                    new Rental {Date = DateTime.Parse("2020-12-06 07:07:07"), Customer = Customers[8], Movie = movies[8]}
+                    new Rental {Date = DateTime.Parse("2020-12-05 01:02:12"), Customer = Customers[4], Movie = movies[5]}
 
                 };
                 ctx.AddRange(Rentals);
@@ -138,5 +134,5 @@ var url = cells[5].Trim('"');
 try { var test = new Uri(url); }
 catch (Exception) { continue; }
 
-movies.Add(new Movie { Filmtitel = cells[2], Bild = url });
+movies.Add(new Movie { Title = cells[2], Bild = url });
 */

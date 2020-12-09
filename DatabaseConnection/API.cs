@@ -20,7 +20,7 @@ namespace DatabaseConnection
         public static List<Movie> GetMovieSlice(int skip_x, int take_x)
         {
             return ctx.Movies
-                .OrderBy(m => m.Filmtitel)
+                .OrderBy(m => m.Title)
                 .Skip(skip_x)
                 .Take(take_x)
                 .ToList();
@@ -50,9 +50,9 @@ namespace DatabaseConnection
 
         }
 
-        public static List<Movie> GetMovieByName(string Filmtitel)
+        public static List<Movie> GetMovieByName(string Title)
         {
-            return ctx.Movies.AsEnumerable().Where(m => m.Filmtitel.Contains(Filmtitel, StringComparison.OrdinalIgnoreCase)).ToList();
+            return ctx.Movies.AsEnumerable().Where(m => m.Title.Contains(Title, StringComparison.OrdinalIgnoreCase)).ToList();
         }
 
 
