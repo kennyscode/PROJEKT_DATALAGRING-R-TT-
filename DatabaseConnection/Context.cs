@@ -29,3 +29,14 @@ namespace DatabaseConnection
         }
     }
 }
+
+/*
+                    //.LogTo(s => System.Diagnostics.Debug.WriteLine(s))
+                .UseLazyLoadingProxies()
+                .UseSqlServer(
+                @"server=.\SQLExpress;" +
+                @"database=SaleDatabase;" +
+                @"trusted_connection=true;" +
+                @"MultipleActiveResultSets=True"
+                );
+*/

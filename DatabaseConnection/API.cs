@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,6 +12,7 @@ namespace DatabaseConnection
         // Här har jag ett kontext tillgängligt för alla API metoder.
         static Context ctx;
 
+        public static Customer LoggedInGuns;
         // Statiska konstruktorer kallas på innan den statiska klassen används.
         static API()
         {
@@ -27,8 +29,14 @@ namespace DatabaseConnection
         }
         public static Customer GetCustomerByName(string Användarnamn)
         {
-            return ctx.Customers
+
+
+            var bror =  ctx.Customers
                 .FirstOrDefault(c => c.Användarnamn.ToLower() == Användarnamn.ToLower());
+
+            LoggedInGuns = bror;
+
+            return bror;
 
         }
         public static bool RegisterSale(Customer customer, Movie movie)
@@ -50,6 +58,16 @@ namespace DatabaseConnection
 
         }
 
+        public static IEnumerable<Genre> GetAllGenres()
+        {
+            return ctx.Genres.Select(row => row);
+        }
+        
+        public static IEnumerable<Rental> GetAllRentals()
+        {
+            return ctx.Rentals.Where(r=>r.Customer.Id == LoggedInGuns.Id);
+        }
+
         public static List<Movie> GetMovieByName(string Title)
         {
             return ctx.Movies.AsEnumerable().Where(m => m.Title.Contains(Title, StringComparison.OrdinalIgnoreCase)).ToList();
@@ -63,11 +81,6 @@ namespace DatabaseConnection
             var movies = ctx.Movies.Where(m => m.Genres.Any(g => g.Name.ToLower() == genre.Name.ToLower())).ToList();
 
             return movies;
-        }
-
-        public static IEnumerable<Genre> GetAllGenres()
-        {
-            return ctx.Genres.Select(row => row);
         }
 
     }
