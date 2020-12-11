@@ -65,5 +65,10 @@ namespace DatabaseConnection
             return movies;
         }
 
+        public static IEnumerable<Genre> GetAllGenres()
+        {
+            return ctx.Genres.Select(row => row);
+        }
+
     }
     }
