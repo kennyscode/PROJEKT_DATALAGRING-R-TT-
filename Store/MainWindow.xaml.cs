@@ -140,38 +140,59 @@ namespace Store
             {
                 var movies = API.GetMovieByGenre(nGenre);
                 MovieGrid.Children.Clear();
-                int x = 0, y = 0;
-                foreach(Movie movie in movies)
-                {
-                    
-                    var image = new Image()
-                    {
-                        Cursor = Cursors.Hand, // Visa en 'click me' hand när man hovrar över bilden
-                        HorizontalAlignment = HorizontalAlignment.Center,
-                        VerticalAlignment = VerticalAlignment.Center,
-                        Margin = new Thickness(4, 4, 4, 4),
-                    };
-                    image.MouseUp += Image_MouseUp;
-
-                    try
-                    {
-                        image.Source = new BitmapImage(new Uri(movie.Bild)); // Hämta hem bildlänken till RAM
-                    }
-                    catch (Exception Guns) when
-                        (Guns is ArgumentNullException ||
-                         Guns is System.IO.FileNotFoundException ||
-                         Guns is UriFormatException)
-                    {
-                        // Om något gick fel så lägger vi in en placeholder 
-                        image.Source = new BitmapImage(new Uri("https://wolper.com.au/wp-content/uploads/2017/10/image-placeholder.jpg"));
-                    }
-                    MovieGrid.Children.Add(image);
-                    Grid.SetRow(image, y);
-                    Grid.SetColumn(image, x);
-                    x++;
-                }
+                render(movies);
             }
 
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+            var rentals = API.GetAllRentals();
+            List<Movie> movies = new List<Movie>();
+            foreach(var rental in rentals)
+            {
+                movies.Add(rental.Movie);
+            }
+
+            render(movies);
+        }
+
+
+
+        void render(IEnumerable<Movie> movies)
+        {
+            MovieGrid.Children.Clear();
+            int x = 0, y = 0;
+            foreach (Movie movie in movies)
+            {
+
+                var image = new Image()
+                {
+                    Cursor = Cursors.Hand, // Visa en 'click me' hand när man hovrar över bilden
+                    HorizontalAlignment = HorizontalAlignment.Center,
+                    VerticalAlignment = VerticalAlignment.Center,
+                    Margin = new Thickness(4, 4, 4, 4),
+                };
+                image.MouseUp += Image_MouseUp;
+
+                try
+                {
+                    image.Source = new BitmapImage(new Uri(movie.Bild)); // Hämta hem bildlänken till RAM
+                }
+                catch (Exception Guns) when
+                    (Guns is ArgumentNullException ||
+                     Guns is System.IO.FileNotFoundException ||
+                     Guns is UriFormatException)
+                {
+                    // Om något gick fel så lägger vi in en placeholder 
+                    image.Source = new BitmapImage(new Uri("https://wolper.com.au/wp-content/uploads/2017/10/image-placeholder.jpg"));
+                }
+                MovieGrid.Children.Add(image);
+                Grid.SetRow(image, y);
+                Grid.SetColumn(image, x);
+                x++;
+            }
         }
     }
 }

@@ -29,6 +29,7 @@ namespace Store
             // det användaren skrev in.
             string username_in_text = NameField.Text.Trim();
 
+            string password_in_text = password.Text.Trim();
             // Kallar på min databas api för att få ut ett record som matchar namnet.
             State.User = API.GetCustomerByName(username_in_text);
 

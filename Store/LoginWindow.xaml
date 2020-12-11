@@ -6,18 +6,19 @@
         xmlns:local="clr-namespace:Store"
         mc:Ignorable="d"
         Title="LoginWindow" Height="450" Width="800">
-    <Grid>
-        <Label Content="Enter Your Name" HorizontalAlignment="Center" Margin="0,108,0,0" VerticalAlignment="Top"/>
-        <!-- 
+  <Grid>
+    <Label Content="Enter Your Name" HorizontalAlignment="Center" Margin="0,108,0,0" VerticalAlignment="Top"/>
+    <!-- 
             En TextBox för att hämta in ett användarnamn från användaren. 
             Ger objektinstansen ett namn för att komma åt det inne i C# koden.
         -->
-        <TextBox Name="NameField" HorizontalAlignment="Center" Margin="0,184,0,0" Text="..." TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <!-- 
+    <TextBox Name="NameField" HorizontalAlignment="Center" Margin="0,184,0,0" Text="..." TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+    <!-- 
             En Button att klicka på när man vill logga in.
             Click-eventet är kopplat till LogIn_Click metoden 
             som finns definierad inne i 'LoginWindow.xaml.cs'
         -->
-        <Button Click="LogIn_Click" Content="Log In" HorizontalAlignment="Center" Margin="0,246,0,0" VerticalAlignment="Top"/>
-    </Grid>
+    <Button Click="LogIn_Click" Content="Log In" HorizontalAlignment="Center" Margin="0,246,0,0" VerticalAlignment="Top"/>
+    <TextBox x:Name="password" HorizontalAlignment="Center" Text="..." TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="0,217,0,0"/>
+  </Grid>
 </Window>
